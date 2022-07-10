@@ -72,6 +72,20 @@ contract Instance {
 }
 ```
 
+## Review
+
+After having the source code for this level, I can say the technical objective of this level is to 
+
+> "set the `cleared` state variable to `true`".
+
+And the only obvious way to do that is to pass through the `authenticate` function, which require us to know the `passkey` which is equivalent to the `password` state variable. The password is a public state variable and can be read directly via ABI interaction.
+
+To try this out, I'll request for a new instance. :finger-crossed
+
+```solidity
+function authenticate(string memory passkey){
+```
+
 Cheers!
 Let's have some fun!!
 Onto the next one!
