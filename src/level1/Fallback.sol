@@ -1,18 +1,3 @@
-# Level 1: Fallback
-
-## Objective
-
-- claim ownership of the contract
-- Reduce the balance to 0
-
-## Intro
-
-Some smart-contracts are ownable, meaning that a central account or accounts can be set as its owner. The owner(s) ften have the ability to perform some actions that are impossible for other actors interacting with the contract to achieve.
-Ownership is based on the Role Based Access Control (RBAC) which tells which account is able to perform which function. A typical example is allowing owner of a contract to view balances of tokens in a contract, or withdrawal from token balances. We won't want just any actor to withdrawal tokens balances. 😄
-
-## Instance source code
-
-```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -55,5 +40,3 @@ contract Fallback {
     owner = msg.sender;
   }
 }
-```
-

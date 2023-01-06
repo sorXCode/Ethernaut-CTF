@@ -1,1 +1,1 @@
-@level0=src/level0
+@=src/
