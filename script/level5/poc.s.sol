@@ -15,12 +15,12 @@ contract POC is Script {
 
     function run() external {
         vm.startBroadcast();
-        console.log("Initial Balance: " + instance.balanceOf(msg.sender));
+        console.log("Initial Balance: ", instance.balanceOf(msg.sender));
 
         uint balance = instance.balanceOf(msg.sender);
         instance.transfer(address(this), balance+1);
 
-        console.log("Final Balance: " + instance.balanceOf(msg.sender));
+        console.log("Final Balance: ", instance.balanceOf(msg.sender));
         vm.stopBroadcast();
     }
 }
